@@ -8,6 +8,7 @@
   --main-gray: #757575;
   --background-sahara: #f5f4fa;
   --background-black: #2f303a;
+  --background-hero: #c4c4c4;
 }
 
 body {
@@ -123,11 +124,12 @@ ul {
   margin-left: auto;
 }
 
-.header-contacts a {
+.header-contacts-item a {
+  display: flex;
+  align-items: center;
   color: var(--main-gray);
   text-decoration: none;
 
-  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -136,23 +138,38 @@ ul {
   margin-right: 50px;
 }
 
-.header-contacts a:hover,
-.header-contacts a:focus {
+.header-contacts-item a:hover,
+.header-contacts-item a:focus {
   color: var(--main-blue);
+}
+
+.header-contacts-item a:hover .header-icons,
+.header-contacts-item a:focus .header-icons {
+  fill: var(--main-blue);
+}
+
+.header-icons {
+  fill: var(--main-blue);
+  
+  margin-right: 10px;
 }
 
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+ß
+  background-image: linear-gradient(
+      90deg,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-bg.png");
+  background-size: cover;
 
-  background-color: var(--background-black);
+  background-color: var(--background-hero);
+
   color: var(--main-white);
 }
-
-/* .hero .container {
-  text-align: center;
-  padding-top: 200px;
-} */
 
 .hero-title {
   margin-top: 0;
